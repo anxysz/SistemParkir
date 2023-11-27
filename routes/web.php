@@ -24,3 +24,7 @@ Route::get('/', function (){
 Route::get('/parkir', function(){
     return view('parkir.parkir');
 });
+
+Route::get('/karcis', function(){
+    return view('karcis.karcis');
+});
