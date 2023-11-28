@@ -20,3 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function (){
     return view('home');
 });
+
+Route::get('/parkir', function(){
+    return view('parkir.parkir');
+});
+
+Route::get('/karcis', function(){
+    return view('karcis.karcis');
+});
