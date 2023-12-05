@@ -28,3 +28,7 @@ Route::get('/parkir', function(){
 Route::get('/karcis', function(){
     return view('karcis.karcis');
 });
+
+Route::get('/laporan', function(){
+    return view('laporan.laporan');
+});
