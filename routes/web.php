@@ -18,9 +18,9 @@ use App\Http\Controllers\DataParkirController;
 //    return view('welcome', ['title' => 'Sistem Parkir']);
 //});
 
-// Route::get('/', function (){
-//     return view('main');
-// });
+Route::get('/', function (){
+    return view('main');
+});
 
 Route::get('/parkir', function(){
     return view('parkir.parkir');
@@ -43,3 +43,15 @@ Route::get('/admin/data_parkir/data', [DataParkirController::class, 'dataParkir'
 Route::get('/satpam/main', function () {
     return view('satpam.main');
 })->name('satpam.main');
+
+Route::get('/login', function(){
+    return view('login.login');
+});
+
+Route::get('/register', function(){
+    return view('register.register');
+});
+
+Route::get('/dashboard', function(){
+    return view('dashboard.dashboard');
+});
