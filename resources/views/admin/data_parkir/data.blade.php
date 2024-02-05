@@ -12,6 +12,18 @@
 
 @endsection
 
+@push('page-action'){
+    <a href="" class="btn btn-success btn-sm" style="float:right"> Export PDF
+        <i class="fa fa-solid fa-print"></i>
+    </a>
+    <a href="{{ route('dataparkir.create') }}" class="btn btn-info btn-sm" style="float:right; margin-right: 10px;">
+        Tambah Data <i class="fa fa-plus-circle"></i>
+    </a>
+}
+    
+@endpush
+
+
 @section('title', 'Data Parkir Elektro')
 
 @section('breadcrumbs')
@@ -41,12 +53,8 @@
                 <div class="card">
                     <div class="card-header">
                         <strong class="card-title">DATA PARKIRAN</strong>
-                        <button class="btn btn-success btn-sm" style="float:right">
-                            Export PDF <i class="fa fa-solid fa-print"></i>
-                        </button>                        
-                        <button class="btn btn-info btn-sm" style="float:right; margin-right: 10px;">
-                            Tambah Data <i class="fa fa-plus-circle"></i>
-                        </button>                        
+                        @stack('page-action')
+                                               
                     </div>
                     <div class="card-body">
                         <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0"
@@ -56,10 +64,32 @@
                                     <th>No</th>
                                     <th>Lokasi Parkir</th>
                                     <th>Kapasitas</th>
-                                    <th>Aksi</th>
+                                    <th colspan="2">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($admins as $tambah)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{$tambah->parkiran}}</td>
+                                        <td>{{$tambah->kapasitas}}</td>
+                                        <td>
+                                            <a href="{{ route('dataparkir.edit', $tambah->id_lokasi) }}" class="btn btn-warning btn-sm" >
+                                                <i class="fa fa-solid fa-pencil"></i>
+                                            </a>
+                                        <!-- Tombol Delete -->
+                                        </td>
+                                        <td>
+                                            <form action="{{ route('dataparkir.destroy', $tambah->id_lokasi) }}" method="post">
+                                                @csrf
+                                                @method('delete')
+                                                <button class="btn btn-danger btn-sm">
+                                                <i class="fa fa-solid fa-trash"></i>
+                                            </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
                                 {{-- <tr>
                                     <td>1</td>
                                     <td>Mesin</td>

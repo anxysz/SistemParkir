@@ -17,7 +17,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Parkir Masuk</h1>
+                <h1>Parkir Keluar</h1>
             </div>
         </div>
     </div>
@@ -41,8 +41,8 @@
                             <label for="jenis_kendaraan">Jenis Kendaraan</label>
                             <select class="form-control form-control-md" name="jenis_kendaraan" id="jenis_kendaraan">
                                 <option value="" selected>-- Pilih Jenis Kendaraan --</option>
-                                <option value="Mobil">Mobil</option>
-                                <option value="Motor">Motor</option>
+                                <option value="mobil">Mobil</option>
+                                <option value="motor">Motor</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -55,7 +55,7 @@
                             </div>
                         </div>
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary">Cetak</button>
+                            <button type="submit" class="btn btn-primary">Keluar</button>
                         </div>
                     </form>
                     </div>
@@ -78,14 +78,14 @@
                                     </th>
                                     <th>Jenis
                                     </th>
-                                    <th>Jam Masuk
+                                    <th>Jam Keluar
                                     </th>
                                     <th>Penjaga
                                     </th>
                                     <th>Lokasi
                                     </th>
-                                    <th colspan="2">Aksi
-                                    </th>
+                                    
+                                
                                 </tr>
                             </thead>
                             <tbody>
@@ -94,21 +94,9 @@
                                     <td>{{$parkir->kode_karcis}}</td>
                                     <td>{{$parkir->nomor_plat}}</td>
                                     <td>{{$parkir->jenis}}</td>
-                                    <td>{{ \Carbon\Carbon::parse($parkir->waktu_masuk)->format('H:i:s') }}</td>
+                                    <td>{{ now()->format('H:i:s') }}</td>
                                     <td>{{$parkir->penjaga}}</td>
                                     <td>{{$parkir->lokasi}}</td>
-                                    <td>
-                                        <!-- Tombol Edit -->
-                                        <a href="{{ route('parkir.edit', $parkir->id) }}" class="btn btn-warning btn-sm">
-                                        <i class="fa fa-solid fa-edit"></i>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <!-- Tombol Cetak -->
-                                        <a href="{{ route('parkir.cetak', $parkir->id) }}" class="btn btn-info btn-sm">
-                                        <i class="fa fa-solid fa-print"></i>
-                                        </a>
-                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>

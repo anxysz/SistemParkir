@@ -30,36 +30,54 @@
 
     <style>
         .button-bg {
-            color: #000000;
-            background-color: #d7c0ae;
+            color: #ffffff;
+            background-color: #D9251B;
+        }
+        .form-color {
+            background-color: #282974;
         }
         .large-header {
+            color: #ffffff;
             font-size: 24px;
             text-align: center;
+        }
+        .font-color{
+            color: #ffffff;
+        }
+        .login-bg {
+            background-color: #ffffff;
         }
     </style>
 
 
 </head>
 
-<body>
-
-
-    <div class="sufee-login d-flex align-content-center flex-wrap">
+<body class="login-bg">
+    <div class="sufee-login d-flex align-content-center flex-wrap" >
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.html">
-                        <img class="align-content" src="images/logo.png" alt="">
+                        <img src="{{ asset('style/images/polines.png') }}" alt="Logo" style="width: 1000px; height: 100px;">
                     </a>
                 </div>
-                <div class="login-form">
+                <div class="login-form form-color">
                     <div class="large-header">Login</div>
-                    <form>
+                    @if($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $item)
+                                <li>{{ $item }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+                    <form action="" method="POST">
+                        @csrf
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                                <input type="email" id="email" name="email" placeholder="Email" class="form-control">
+                                <input type="email" name="email" placeholder="Email" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -68,9 +86,9 @@
                                 <input type="password" id="password" name="password" placeholder="Password" class="form-control">
                             </div>
                         </div>
-                                <div class="checkbox">
+                                <div class="checkbox"  class="font-color">
                                     <label>
-                                <input type="checkbox"> Remember Me
+                                    <input type="checkbox"> Remember Me
                                 </div>
                                 <button type="submit" class="btn button-bg btn-flat m-b-30 m-t-30">Sign in</button>
                                 <div class="register-link m-t-15 text-center">

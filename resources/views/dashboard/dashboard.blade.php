@@ -49,8 +49,8 @@
                                 <!-- Card untuk Parkiran Elektro -->
                                 <div class="card text-white bg-primary">
                                     <div class="card-body">
-                                        <h4 class="card-title">Total Kendaraan Parkir</h4>
-                                        <p class="card-text" style="font-size: 24px; font-weight: bold; color: white;">@{{ totalKendaraanParkir }}</p>
+                                        <h4 class="card-title">Total Kendaraan Parkir </h4>
+                                        <p class="card-text" style="font-size: 24px; font-weight: bold; color: white;"> {{ $totalRecords }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -90,30 +90,30 @@
         el: '#app',
         data: {
             totalKendaraanParkir: 15,
-            totalMaksimalParkir: 20,
+            totalMaksimalParkir: 500,
             jumlahadminparkir: 3,
         }
     });
+
+    var totalMotor = {{ $totalMotor }};
+    var totalMobil = {{ $totalMobil }};
+    var totalRecords = {{ $totalRecords }};
 
     var ctx = document.getElementById('pieChart').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ['Red', 'Blue', 'Purple', 'Brown'],
+            labels: ['Motor', 'Mobil'],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5],
+                label: '# of Vehicles',
+                data: [totalMotor, totalMobil],
                 backgroundColor: [
-                    'rgba(255, 0, 0, 0.2)', // Red
-                    'rgba(30, 144, 255, 0.2)', // Blue
-                    'rgba(128, 0, 128, 0.2)', // Purple
-                    'rgba(165, 42, 42, 0.2)', // Brown
+                    'rgba(255, 0, 0, 0.2)', // Red for Motor
+                    'rgba(30, 144, 255, 0.2)', // Blue for Mobil
                 ],
                 borderColor: [
-                    'rgba(255, 0, 0, 1)', // Red
-                    'rgba(30, 144, 255, 1)', // Blue
-                    'rgba(128, 0, 128, 1)', // Purple
-                    'rgba(165, 42, 42, 1)', // Brown
+                    'rgba(255, 0, 0, 1)', // Red for Motor
+                    'rgba(30, 144, 255, 1)', // Blue for Mobil
                 ],
                 borderWidth: 1
             }]

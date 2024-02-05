@@ -18,7 +18,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>STRUK</h1>
+                <h1>KARCIS</h1>
             </div>
         </div>
     </div>
@@ -34,10 +34,6 @@
                 <div class="card">
                     <div class="card-header">
                         <strong class="card-title">DATA KENDARAAN</strong>
-                        <button class="btn btn-success btn-sm" style="float:right">
-                        Export PDF
-                        <i class="fa fa-regular fa-file-pdf"></i>
-                            </button>
                     </div>
                     <div class="card-body">
                         <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0"
@@ -45,8 +41,6 @@
                             
                             <thead>
                                 <tr>
-                                    <th>No
-                                    </th>
                                     <th>Kode Karcis
                                     </th>
                                     <th>Nomor Plat
@@ -57,8 +51,6 @@
                                     </th>
                                     <th>Jam Masuk
                                     </th>
-                                    <th>Jam Keluar
-                                    </th>
                                     <th>Penjaga
                                     </th>
                                     <th>Lokasi Parkir
@@ -68,27 +60,27 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            @foreach ($parkirs as $parkir)
                                 <tr>
-                                    <td>1</td>
-                                    <td>13232</td>
-                                    <td>H 1234 SZE</td>
-                                    <td>Motor</td>
-                                    <td>13 Januari 2023</td>
-                                    <td>13.00</td>
-                                    <td>14.00</td>
-                                    <td>Susanto</td>
-                                    <td>Elektro</td>
+                                    <td>{{$parkir->kode_karcis}}</td>
+                                    <td>{{$parkir->nomor_plat}}</td>
+                                    <td>{{$parkir->jenis}}</td>
+                                    <td>{{ \Carbon\Carbon::parse($parkir->waktu_masuk)->format('d-m-Y') }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($parkir->waktu_masuk)->format('H:i:s') }}</td>
+                                    <td>{{$parkir->penjaga}}</td>
+                                    <td>{{$parkir->lokasi}}</td>
                                     <td>
-                                        <!-- Tombol Edit -->
-                                        <button class="btn btn-warning btn-sm">
-                                            <i class="fa fa-solid fa-pencil"></i>
-                                        </button>
                                         <!-- Tombol Delete -->
-                                        <button class="btn btn-danger btn-sm">
+                                        <form action="{{ route('parkir.destroy', $parkir->id) }}" method="post">
+                                            @csrf
+                                            @method('delete')
+                                            <button class="btn btn-danger btn-sm">
                                             <i class="fa fa-solid fa-trash"></i>
                                         </button>
+                                        </form>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
 
                         </table>

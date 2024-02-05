@@ -38,6 +38,11 @@
 </head>
 
 <body>
+    <style>
+        .navbar-color{
+            background-color: #6DA4AA;
+        }
+    </style>
     <!-- Left Panel -->
 
     <aside id="left-panel" class="left-panel">
@@ -48,17 +53,17 @@
                     aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="{{ asset('style/images/logo.png')}}" alt="Logo"></a>
+                <a class="navbar-brand" href="./"><img src="{{ asset('style/images/polines.png')}}" alt="Logo"></a>
                 <a class="navbar-brand hidden" href="./"><img src="{{ asset('style/images/logo2.png')}}" alt="Logo"></a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="{{ route('admin.dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="{{ url('adminpage') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>                    
                     <li>
-                        <a href="{{ route('admin.data_parkir.data', ['data']) }}"> <i class="menu-icon fa fa-file-text-o"></i>Data Parkir </a>
+                        <a href="{{ url('dataparkir') }}"> <i class="menu-icon fa fa-file-text-o"></i>Data Parkir </a>
                     </li>                                        
                     {{-- <li>
                         <a href="{{ url('admin/data_parkir/') }}"> <i class="menu-icon fa fa-file-text-o"></i>Data Parkir </a>
@@ -83,7 +88,7 @@
             <div class="header-menu">
 
                 <div class="col-sm-7">
-                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <a id="menuToggle" class="menutoggle pull-left navbar-color"><i class="fa fa fa-tasks"></i></a>
                     <div class="header-left">
                         <button class="search-trigger"><i class="fa fa-search"></i></button>
                         <div class="form-inline">
