@@ -11,8 +11,7 @@
 <body>
     <h4 class="text-center">Laporan Data Parkir</h4>
     <br>
-    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0"
-                            width="100%">
+    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
                                     <th>No
