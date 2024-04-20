@@ -1,19 +1,19 @@
 ## PREVIEW IMAGE
 
-<p align="center"> Dashboard </p>
+<p align="left"> Login </p>
 <img src="https://github.com/anxysz/SistemParkir/blob/main/public/login.png" alt="Login"></a>
 
-<p align="center"> Dashboard </p>
-![alt text](https://github.com/anxysz/SistemParkir/blob/main/public/dashboard.png?raw=true)
+<p align="left"> Dashboard </p>
+<img src="https://github.com/anxysz/SistemParkir/blob/main/public/dashboard.png" alt="Dashboard"></a>
 
-<p align="center"> Dashboard </p>
-![alt text](https://github.com/anxysz/SistemParkir/blob/main/public/parkir_masuk.png?raw=true)
+<p align="left"> Parkir Masuk </p>
+<img src="https://github.com/anxysz/SistemParkir/blob/main/public/parkir_masuk.png" alt="Parkir Masuk"></a>
 
-<p align="center"> Dashboard </p>
-![alt text](https://github.com/anxysz/SistemParkir/blob/main/public/karcis.png?raw=true)
+<p align="left"> Karcis </p>
+<img src="https://github.com/anxysz/SistemParkir/blob/main/public/karcis.png" alt="Karcis"></a>
 
-<p align="center"> Dashboard </p>
-![alt text](https://github.com/anxysz/SistemParkir/blob/main/public/laporan.png?raw=true)
+<p align="left"> Laporan </p>
+<img src="https://github.com/anxysz/SistemParkir/blob/main/public/laporan.png" alt="Laporan"></a>
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
