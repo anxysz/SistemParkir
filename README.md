@@ -1,7 +1,7 @@
 ## PREVIEW IMAGE
 
 <p align="center"> Dashboard </p>
-![alt text](https://github.com/anxysz/SistemParkir/blob/main/public/login.png?raw=true)
+![login](https://github.com/anxysz/SistemParkir/assets/43987929/77842202-d6c8-40e5-9cd9-02beac1b0038)
 
 <p align="center"> Dashboard </p>
 ![alt text](https://github.com/anxysz/SistemParkir/blob/main/public/dashboard.png?raw=true)
