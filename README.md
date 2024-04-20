@@ -1,3 +1,20 @@
+## PREVIEW IMAGE
+
+<p align="center"> Dashboard </p>
+![alt text](https://github.com/anxysz/SistemParkir/blob/main/public/login.png?raw=true)
+
+<p align="center"> Dashboard </p>
+![alt text](https://github.com/anxysz/SistemParkir/blob/main/public/dashboard.png?raw=true)
+
+<p align="center"> Dashboard </p>
+![alt text](https://github.com/anxysz/SistemParkir/blob/main/public/parkir_masuk.png?raw=true)
+
+<p align="center"> Dashboard </p>
+![alt text](https://github.com/anxysz/SistemParkir/blob/main/public/karcis.png?raw=true)
+
+<p align="center"> Dashboard </p>
+![alt text](https://github.com/anxysz/SistemParkir/blob/main/public/laporan.png?raw=true)
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
